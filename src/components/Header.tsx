@@ -39,17 +39,6 @@ const Header = () => {
         </Link>
 
         <nav className="flex items-center gap-4">
-          <button 
-            onClick={toggleTheme}
-            className="hover:opacity-70 transition"
-            aria-label="Toggle theme"
-          >
-            <img 
-              src={icons.themeIcon} 
-              alt="Toggle theme" 
-              className="h-7 w-7 cursor-pointer"
-            />
-          </button>
 
           <Link to="/statistics" className="hover:opacity-70 transition">
             <img 
@@ -74,6 +63,18 @@ const Header = () => {
               className="rounded-full h-10 w-10 object-cover"
             />
           </Link>
+
+          <button 
+            onClick={toggleTheme}
+            className="hover:opacity-70 transition"
+            aria-label="Toggle theme"
+          >
+            <img 
+              src={icons.themeIcon} 
+              alt="Toggle theme" 
+              className="h-7 w-7 cursor-pointer"
+            />
+          </button>
         </nav>
       </div>
     </header>
