@@ -38,6 +38,9 @@ interface AppState {
   toggleTask: (id: string) => void;
   deleteTask: (id: string) => void;
   setCurrentTask: (id: string | null) => void;
+
+  theme: 'light' | 'dark';
+  toggleTheme: () => void;
 }
 
 const TIMES = {
@@ -105,4 +108,10 @@ export const useAppStore = create<AppState>((set) => ({
   })),
 
   setCurrentTask: (id) => set({ currentTaskId: id }),
+
+  theme: 'light',
+  
+  toggleTheme: () => set((state) => ({ 
+    theme: state.theme === 'light' ? 'dark' : 'light' 
+  })),
 }));
